@@ -6,7 +6,7 @@ angular.module( 'endain.io' ).controller( 'articles', [ '$scope', '$timeout', fu
 	$timeout( function () {
 		$scope.articles = [ {
 			'title': 'Spatial Querying Basics',
-			'link': 'http://dotgaming.net/dev/spatial_querying',
+			'link': 'http://articles.endain.io/spatial_querying',
 			'image': 'articles_spatial_querying.png'
 		} ];
 	}, 1000 );

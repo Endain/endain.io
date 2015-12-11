@@ -2,7 +2,7 @@ var express = require( 'express' );
 var app = express();
 
 var options = {
-	root: __dirname + 'public/',
+	root: __dirname + '/public/',
 	dotfiles: 'deny',
 	headers: {
 		'x-timestamp': Date.now(),

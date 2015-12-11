@@ -1,0 +1,366 @@
+/* Author: Austin Steeno */
+/* Email: austin.steeno@gmail.com */
+
+/* Main body styling */
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #222222;
+    margin: 0px;
+    padding: 80px 0px 0px 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* Navigation styling */
+.header {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 80px;
+	cursor: default;
+	background-color: #333333;
+	color: #f8f8f8;
+	font-family: 'Oswald', sans-serif;
+	box-sizing: border-box;
+	z-index: 1000;
+}
+
+.header .left {
+	display: inline-block;
+	height: 100%;
+	padding-left: 20px;
+}
+
+.header .right {
+	display: inline-block;
+	height: 100%;
+	padding-right: 20px;
+}
+
+.header .title {
+	font-variant: small-caps;
+	line-height: 1.625em
+}
+.header .title .major {
+	font-size: 38px;
+	letter-spacing: 2px;
+}
+.header .title .minor {
+	font-size: 17px;
+	letter-spacing: 1.05px;
+}
+
+.header .page {
+	display: inline-block;
+	font-variant: small-caps;
+	font-size: 20px;
+	line-height: 1em;
+	cursor: pointer;
+	color: #f8f8f8;
+	transform: translateY(0px);
+	transition: color 0.2s ease, transform 0.2s ease;
+}
+.header .page:hover {
+	color: #f0f0f0;
+	transform: translateY(-1px);
+}
+.header .page a {
+	color: #f8f8f8;
+	text-decoration: none;
+}
+
+.header .seperator {
+	font-variant: small-caps;
+	font-size: 20px;
+	font-weight: 300;
+	color: #999999;
+	line-height: 1em;
+	margin: 0px 15px;
+	position: relative;
+	top: 2px;
+}
+
+/* Content styling */
+.content {
+	position: absolute;
+	width: 100%;
+	height: calc(100% - 80px);
+	max-height: calc(100% - 80px);
+	overflow-y: auto; 
+	z-index: 100;
+}
+
+.container {
+	font-size: 19px;
+	width: 75%;
+	max-width: 1170px;
+	margin: 0px auto;
+	padding: 30px;
+}
+
+.bigger {
+	font-size: 28px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+.standard {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.porthole {
+	position: relative;
+	border-radius: 9999px;
+	margin: 50px auto;
+	width: 320px;
+	height: 320px;
+	overflow: hidden;
+}
+.porthole.small {
+	margin: 0px auto;
+	width: 192px;
+	height: 192px;
+}
+.porthole img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
+}
+.porthole img.portrait {
+  width: 100%;
+  height: auto;
+}
+
+.contact {
+	display: table;
+	margin: 50px auto;
+}
+.contact .icon {
+	display: table-cell;
+	padding-right: 15px;
+	vertical-align: middle;
+}
+.contact .details {
+	display: table-cell;
+	padding-left: 15px;
+	vertical-align: middle;
+}
+.contact .details p {
+	margin: 5px 0px;
+}
+.contact .details a {
+	text-decoration: none;
+	color: #337ab7;
+}
+
+/* Some styling for the articles section */
+.tile {
+	display: inline-block;
+	width: 50%;
+	height: 200px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.tile a {
+	color: #222222;
+	text-decoration: none;
+}
+
+.tile .display {
+	position: relative;
+	background-color: #ffffff;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	border: 10px solid #f4f4f4;
+	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.tile .image {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	z-index: 0;
+	transform: translateY(0px);
+	transition: transform 0.35s ease;
+}
+.tile:hover .image {
+	transform: translateY(-6px);
+}
+
+.tile .title {
+	position: absolute;
+	width: 100%;
+	font-size: 20px;
+	padding: 8px 10px;
+	background-color: rgba(255,255,255,0.85);
+	box-sizing: border-box;
+	z-index: 1;
+}
+
+.article {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	overflow: hidden;
+}
+.article iframe {
+	width: 100%;
+	height: 100%;
+}
+
+/* Fancy background classes */
+.background {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+}
+
+.background .visualization {
+	width: 100%;
+	height: 100%;
+}
+
+/* General use classes */
+.vertically-center {
+	position: relative;
+    top: 50%; 
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+/* Angular animations */
+.slide {
+	position: absolute;
+	width: 100%;
+	min-height: 100%;
+}
+
+.slide.ng-enter {
+	transition: transform 0.3s ease 0.5s, opacity 0.3s ease 0.5s;
+
+	position: absolute;
+	width: 100%;
+
+	opacity: 0;
+	transform: translateY(-25px);
+}
+.slide.ng-enter.ng-enter-active {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.slide.ng-leave {
+	transition: transform 0.4s ease, opacity 0.4s ease;
+
+	position: absolute;
+	width: 100%;
+
+	opacity: 1;
+	transform: scale(1);
+}
+.slide.ng-leave.ng-leave-active {
+	opacity: 0;
+	transform: scale(0.9);
+}
+
+.fade-in {
+	opacity:1;
+	transform: scale(1);
+}
+.fade-in.ng-move,
+.fade-in.ng-enter,
+.fade-in.ng-leave {
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-in.ng-leave.ng-leave-active,
+.fade-in.ng-move,
+.fade-in.ng-enter {
+	opacity: 0;
+	transform: scale(1.1);
+}
+.fade-in.ng-leave,
+.fade-in.ng-move.ng-move-active,
+.fade-in.ng-enter.ng-enter-active {
+	opacity:1;
+	transform: scale(1);
+}
+.fade-in.ng-enter-stagger,
+.fade-in.ng-leave-stagger {
+    transition-delay: 0.15s;
+    transition-duration: 0s;
+}
+
+.fade-out {
+	opacity:1;
+	transform: scale(1);
+}
+.fade-out.ng-move,
+.fade-out.ng-enter,
+.fade-out.ng-leave {
+	transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.fade-out.ng-leave.ng-leave-active,
+.fade-out.ng-move,
+.fade-out.ng-enter {
+	opacity: 0;
+	transform: scale(0.94);
+}
+.fade-out.ng-leave,
+.fade-out.ng-move.ng-move-active,
+.fade-out.ng-enter.ng-enter-active {
+	opacity:1;
+	transform: scale(1);
+}
+.fade-out.ng-enter-stagger,
+.fade-out.ng-leave-stagger {
+    transition-delay: 0.15s;
+    transition-duration: 0s;
+}
+
+/* Custom scrollbar where supported */
+::-webkit-scrollbar {
+    width: 6px;
+    background: none;
+}
+ 
+::-webkit-scrollbar-track {
+	background: #eeeeee;
+}
+ 
+::-webkit-scrollbar-thumb {
+	background: #333333;
+}
+
+/* Hide preloaded images */
+#preload {
+	display: none;
+}

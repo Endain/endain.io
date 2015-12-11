@@ -1,0 +1,27 @@
+<div class="container">
+
+	<p class="standard">
+		I belive that one of the best ways to learn and truly understand something is to teach it. So I often find myself writing up various guides, articles or tutorials about the topics that interest me.
+	</p>
+	<p class="standard">
+		This page serves as a repository for all the things I've written about over the years. Hopefully some of it is useful!
+	</p>
+
+	<!-- All articles -->
+	<div>
+		
+		<!-- Tile per article -->
+		<div class="tile fade-in" ng-repeat="article in articles">
+			<a ng-href="{{article.link}}" target="_blank">
+				<div class="display" ng-click="openArticle(article)">
+					<div class="title">
+						{{article.title}}
+					</div>
+					<img class="image" ng-src="img/{{article.image}}"></img>
+				</div>
+			</a>
+		</div>
+
+	</div>
+
+</div>

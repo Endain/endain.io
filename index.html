@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" ng-app="endain.io">
+
+
+  <!-- Author: Austin Steeno -->
+  <!-- Email: austin.steeno@gmail.com -->
+
+
+  <head>
+
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <title>Endain.io - Austin Steeno</title>
+
+    <!-- Script includes -->
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-animate.min.js"></script>
+
+    <!-- Style includes -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,400italic,300italic,300,700italic,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="css/primary.css" rel="stylesheet" type="text/css">
+
+    <!-- Set site base -->
+    <base href="/">
+
+  </head>
+
+
+  <body ng-controller="main">
+
+    <!-- Preload a couple images -->
+    <div id="preload">
+      <img src="img/me_1.jpg" width="1" height="1" alt="Image 01" />
+      <img src="img/me_2.png" width="1" height="1" alt="Image 02" />
+    </div>
+
+    <!-- Main site nav -->
+    <nav class="header">
+
+      <!-- Left content -->
+      <span class="left">
+        <div class="title vertically-center">
+          <div class="major">endain</div>
+          <div class="minor">austin steeno</div>
+        </div>
+      </span>
+
+      <!-- Right content -->
+      <span class="right">
+        <div class="vertically-center">
+          <span class="page">
+            <a href="about">about</a>
+          </span>
+          <span class="seperator">/</span>
+          <span class="page">
+            <a href="resume">resume</a>
+          </span>
+          <span class="seperator">/</span>
+          <span class="page">
+            <a href="articles">articles</a>
+          </span>
+          <span class="seperator">/</span>
+          <span class="page">
+            <a href="experiments">experiments</a>
+          </span>
+          <span class="seperator">/</span>
+          <span class="page">
+            <a href="contact">contact</a>
+          </span>
+        </div>
+      </span>
+
+    </nav>
+
+    <!-- Page content -->
+    <div class="content">
+      
+        <div ng-view class="slide"></div>
+
+    </div>
+
+    <!-- Spiffy background -->
+    <div class="background">
+      <canvas id="main-bg" class="visualization"></canvas>
+    </div>
+
+    <!-- Custom site scripts -->
+    <script src="js/_endain_io.js"></script>
+    <script src="js/_endain_io_routing.js"></script>
+    <script src="js/controller.main.js"></script>
+    <script src="js/controller.articles.js"></script>
+    <script src="js/controller.experiments.js"></script>
+    <script src="js/extras.js"></script>
+
+  </body>
+
+
+</html>

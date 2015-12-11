@@ -1,0 +1,27 @@
+<div class="container">
+
+	<p class="standard">
+		My favorite way to relax after a long, hard day of coding and debugging is to go home and code and debug more. :)
+	</p>
+	<p class="standard">
+		This page contains all my various small 'weekend projects' or other small experiments. All of them have source code avaliable on github, so feel free to explore the code and take from it what you will, unless otherwise specified I release them all under public domain.
+	</p>
+
+	<!-- All articles -->
+	<div>
+		
+		<!-- Tile per article -->
+		<div class="tile fade-in" ng-repeat="experiment in experiments">
+			<a ng-href="{{experiment.link}}" target="_blank">
+				<div class="display">
+					<div class="title">
+						{{experiment.title}}
+					</div>
+					<img class="image" ng-src="img/{{experiment.image}}"></img>
+				</div>
+			</a>
+		</div>
+
+	</div>
+
+</div>
